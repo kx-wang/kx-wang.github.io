@@ -2055,7 +2055,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 300px; /*was 375px, this adjusts the width of the navigation bar on the side*/
+		width: 375px; /*was 375px, this adjusts the width of the navigation bar on the side*/
 	}
 
 		#header .top {
