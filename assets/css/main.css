@@ -33,7 +33,7 @@ img {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #fcd5ce;
     font-family: 'Red Rose', cursive;
     position: fixed;
     top: 0px;
@@ -64,7 +64,7 @@ img {
   
 /* Change the color of links on hover */
 .topnav >.topnav-right a:hover {
-    background-color: #ddd;
+    background-color: #fff1e6;
     color: #680e0e;
 }
   
