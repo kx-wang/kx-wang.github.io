@@ -146,19 +146,20 @@ img {
     box-sizing: border-box;
     margin-top: 10px; 
     position: absolute;
+    top: 80px;
 }
 
 .about-me-blurb{
     width: 50%;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 60px;
     margin-left: 270px;
     position: relative;
 }
 .about_photo{
     width: 50%;
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 60px;
     position: relative;
 }
 
