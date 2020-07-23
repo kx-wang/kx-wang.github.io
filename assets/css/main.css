@@ -1,0 +1,204 @@
+/* @import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+*/
+
+/* ---------------------------------------------------------------------------*/
+/* Basic/Global styles                                                        */
+/* ---------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 300;
+    color: #666; 
+    line-height: 1.5em;
+    font-family: 'Red Rose', cursive;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px; /* default font size, and then the h1 h2 etc will grow with it*/
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr auto;
+}
+img {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------------*/
+/* Top Navigation Bar                                                         */
+/* ---------------------------------------------------------------------------*/
+/* Adding properties to the navigation bar */
+.topnav {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Red Rose', cursive;
+    position: fixed;
+    top: 0px;
+    padding: 20px;
+    height: auto;
+    margin-bottom: 2em;
+}
+.topnav > .topnav-left {
+    width: 20%;
+}
+
+.topnav > .topnav-left a {
+    color: #680e0e;
+    padding: 14px 16px; /*vertical horizontal*/
+    text-decoration: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav >.topnav-right {
+    width: 80%;
+    text-align: right;
+}
+.topnav >.topnav-right a {
+    color: #680e0e;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* Change the color of links on hover */
+.topnav >.topnav-right a:hover {
+    background-color: #ddd;
+    color: #680e0e;
+}
+  
+/* Add a color to the active/current link */
+.topnav >.topnav-right a.active {
+    background-color: #ffffff;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------*/
+/* Landing page blurb and image                                               */
+/* ---------------------------------------------------------------------------*/
+.home-page{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 10px; 
+    position: absolute;
+    top: 80px; /* makes it so the divs aren't overlapping*/
+}
+.home-page > .landing-blurb{
+    width: 45%;
+    text-align: right;
+    position: relative;
+    top: 100px;
+}
+.home-page > img.landing-img {
+    width: 55%;
+    width: 400px;
+    height: 400px;
+    left: 50px;
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------------------------*/
+/* my works page                                                              */
+/* ---------------------------------------------------------------------------*/
+.work-page{
+    text-align: center;
+    background-color: #fff1e6;
+}
+.section__title {
+    margin-top: 2em;
+}
+.section__subtitle {
+    margin-bottom: 2em;
+}
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    justify-content: center;
+}
+.portfolio a {
+    margin: 1em 1em;
+    overflow: hidden;
+    height: 300px;
+    
+}
+.portfolio__img{  
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.1);
+    opacity: .5;
+}
+
+
+/* ---------------------------------------------------------------------------*/
+/* about me page                                                              */
+/* ---------------------------------------------------------------------------*/
+.about-me-main{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 10px; 
+    position: absolute;
+}
+
+.about-me-blurb{
+    width: 50%;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-left: 270px;
+    position: relative;
+}
+.about_photo{
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 150px;
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------------------------*/
+/* footer                                                                     */
+/* ---------------------------------------------------------------------------*/
+.footer { /* controls the footer box */
+    background-color: #6D6875;
+    text-align: center;
+    padding: 1.5em 0; /* space within box, between the content */
+    bottom: 0;
+    position: static;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.footer a { 
+    color: #E5989B;
+    text-decoration: none;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 2em; /*without this the icons would be squished */
+}
+
+.social-list__link:hover {
+    opacity: .7;
+}
+
+/*
+border: 1px solid green;
+    border-color: rgb(39, 39, 2);
+    border-width: 3px;
+    border-style: solid;
+*/

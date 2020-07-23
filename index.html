@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head> <!-- contains info about the page, not shown on the page -->
+        <title>Cathy Wang</title> <!-- displayed at top of browser window -->
+        <meta charset="utf-8">
+        <meta content="Cathy Wang - Designer | Researcher | Writer" property="og:title">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="I'm passionate about teaching others to " property="og:description">
+        <link rel="stylesheet" href="assets/css/main.css" /> <!-- link to external style sheet -->
+        <link rel="stylesheet" href="assets/css/all.css"> <!-- for social icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- all HTML elements can carry a class or id attribute. Use id if it's the only
+        thing on the website that will have that style, use class if there's several things 
+        that will have that style. To use flex box: you set a div class to parent and then all 
+        of its children will become columns-->
+        <header class="topnav"> 
+            <div class="topnav-left">
+                <a href="index.html">CATHY WANG</a>
+            </div>
+
+            <div class="topnav-right">
+                <a href="index.html">Home</a>
+                <a href="work.html">Work</a>
+                <a href="resume-general.pdf">Résumé</a>
+                <a href="about.html">About</a>
+            </div>
+        </header> <!--for the top navigation bar -->
+
+        <!-- div element allows you to group together things in a block -->
+        <main class="home-page">
+            <div class="landing-blurb">
+                <h1>Hi! I'm Cathy</h1>
+                <h3>a researcher, programmer, artist, </h3>
+                <h3>and aspiring front-end developer</h3>
+            </div>
+            <img src="images/chibi-me.jpg" class="landing-img">  
+        </main>
+          
+    </body>
+
+    <footer class="footer">
+        <ul class="social-list">
+
+            <li class="social-list__item">
+            <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
+                <i class="fas fa-envelope"></i>
+            </a>
+            </li>
+
+            <li class="social-list__item">
+            <a href="#LinkedIn" class="social-list__link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            </li>
+
+            <li class="social-list__item">
+            <a href="#Github" class="social-list__link">
+                <i class="fab fa-github-square"></i>
+            </a>
+            </li>
+
+        </ul>
+    </footer>
+</html>
