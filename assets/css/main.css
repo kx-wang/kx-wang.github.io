@@ -217,6 +217,11 @@ img {
     padding: 0;
 }
 
+.footer-text {
+    color: #E5989B;
+    font-size: 14px;
+}
+
 .social-list__item {
     margin: 0 2em; /*without this the icons would be squished */
 }
