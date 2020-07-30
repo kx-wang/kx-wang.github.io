@@ -1,56 +1,61 @@
 <!DOCTYPE HTML>
 <html>
-    <head> <!-- contains info about the page, not shown on the page -->
-        <title>Cathy Wang</title> <!-- displayed at top of browser window -->
-        <meta charset="utf-8">
-        <meta content="Cathy Wang - Designer | Researcher | Writer" property="og:title">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="I'm passionate about teaching others to " property="og:description">
-        <link rel="stylesheet" href="assets/css/main.css" /> <!-- link to external style sheet -->
-        <link rel="stylesheet" href="assets/css/all.css"> <!-- for social icons -->
-        <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        <!-- all HTML elements can carry a class or id attribute. Use id if it's the only
-        thing on the website that will have that style, use class if there's several things 
-        that will have that style. To use flex box: you set a div class to parent and then all 
-        of its children will become columns-->
-        <header class="topnav"> 
-            <div class="topnav-left">
-                <a href="index.html">CATHY WANG</a>
-            </div>
+<head>
+    <!-- contains info about the page, not shown on the page -->
+    <title>Cathy Wang</title> <!-- displayed at top of browser window -->
+    <meta charset="utf-8">
+    <meta content="Cathy Wang - Designer | Researcher | Writer" property="og:title">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="I'm passionate about teaching others to " property="og:description">
+    <link rel="stylesheet" href="assets/css/main.css" /> <!-- link to external style sheet -->
+    <link rel="stylesheet" href="assets/css/all.css"> <!-- for social icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
+</head>
 
-            <div class="topnav-right">
-                <a class="navlink active" href="index.html">Home</a>
-                <a class="navlink" href="work.html">Work</a>
-                <a class="navlink" href="resume-general.pdf">Résumé</a>
-                <a class="navlink" href="about.html">About</a>
-            </div>
+<body>
+    <header class="topnav">
+        <div class="topnav-left">
+            <a class="topnav-logo" href="index.html">CATHY WANG</a>
+            <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+        </div>
+        
+        <nav class="nav">
+            <button aria-label="Close navigation" class="close-nav">&times;</button>
+            <ul class="topnav-right">
+                <li class="nav-list-item"><a class="navlink current" href="index.html">Home</a></li>
+                <li class="nav-list-item"><a class="navlink" href="work.html">Work</a></li>
+                <li class="nav-list-item"><a class="navlink" href="resume-general.pdf">Résumé</a></li>
+                <li class="nav-list-item"><a class="navlink" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header><!--for the top navigation bar -->
+    
 
-        </header> <!--for the top navigation bar -->
-
-        <!-- div element allows you to group together things in a block -->
-        <main class="home-page">
-            <div class="landing-blurb">
+    <!-- main part of home page -->
+    <main class="home-page">
+        <div class="landing-blurb">
+            <div class="landing-blurb-container">
                 <h1>Hi! I'm Cathy</h1>
-                <h3>a researcher, programmer, artist, </h3>
+                <h3>a researcher, programmer, artist,</h3>
                 <h3>and aspiring front-end developer</h3>
             </div>
-            <img src="images/website-chibi-me.png" class="landing-img">  
-        </main>
-          
-    </body>
+        </div>
+        <div class="img-container">
+            <img src="images/website-chibi-me.png" class="landing-img" alt="chibi img">
+        </div>
+    </main> <!-- main part of home page -->
 
-    <footer class="footer">
+    <!-- footer -->
+    <footer class="footer"> 
         <ul class="social-list">
-
+    
             <li class="social-list__item">
-            <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
-                <i class="fas fa-envelope"></i>
-            </a>
+                <a href="mailto:kaixiwang95@gmail.com" class="social-list__link">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </li>
-
+    
             <li class="social-list__item">
                 <a href="https://www.linkedin.com/in/kaixi-wang-a192b18a/" class="social-list__link">
                     <i class="fab fa-linkedin"></i>
@@ -62,8 +67,13 @@
                     <i class="fab fa-github-square"></i>
                 </a>
             </li>
-
+    
         </ul>
-        <p class="footer-text">&#169 CATHY WANG 2020 </p> 
-    </footer>
+        <p class="footer-text">&#169 CATHY WANG 2020 </p>
+    </footer> <!-- footer -->
+    
+    <script src="index.js" defer></script>
+</body>
+
+
 </html>
