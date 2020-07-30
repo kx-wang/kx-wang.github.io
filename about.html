@@ -11,54 +11,64 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <header class="topnav"> 
-        <div class="topnav-left">
-            <a href="index.html">CATHY WANG</a>
-        </div>
-
-        <div class="topnav-right">
-            <a class="navlink" href="index.html">Home</a>
-            <a class="navlink" href="work.html">Work</a>
-            <a class="navlink" href="resume-general.pdf">Résumé</a>
-            <a class="navlink active" href="about.html">About</a>
-        </div>
-    </header> <!--for the top navigation bar -->
-
-    <main class="about-me-main">
-        <div class="about-me-blurb">
-            <h1>About Me:</h1>
-            <h4>I recently graduated from the University of Waterloo, with a master's in Electrical and Computer Engineering (April 2020) and bachelor's in Nanotechnology Engineering (2018). My day to day work during master's mainly consisted of writing Matlab code to simulate the quantum physics in semiconductor nanostructures. I am now self-learning front-end web development technologies (HTML, CSS, Javascript & React) while job hunting. Feel free to message me!</h4>
-        </div>
-
-        <div class="about_photo">
-            <img src="images/cat.jpg" width="250">
-        </div>
-    </main>
-
-    <footer class="footer">
-        <ul class="social-list">
-
-            <li class="social-list__item">
-            <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
-                <i class="fas fa-envelope"></i>
-            </a>
-            </li>
-
-            <li class="social-list__item">
-                <a href="https://www.linkedin.com/in/kaixi-wang-a192b18a/" class="social-list__link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
+    <body>
+        <header class="topnav">
+            <div class="topnav-left">
+                <a class="topnav-logo" href="index.html">CATHY WANG</a>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
+            </div>
+            
+            <nav class="nav">
+                <button aria-label="Close navigation" class="close-nav">&times;</button>
+                <ul class="topnav-right">
+                    <li class="nav-list-item"><a class="navlink" href="index.html">Home</a></li>
+                    <li class="nav-list-item"><a class="navlink" href="work.html">Work</a></li>
+                    <li class="nav-list-item"><a class="navlink" href="resume-general.pdf">Résumé</a></li>
+                    <li class="nav-list-item"><a class="navlink current" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header><!--for the top navigation bar -->
     
-            <li class="social-list__item">
-                <a href="https://github.com/kx-wang" class="social-list__link">
-                    <i class="fab fa-github-square"></i>
+        <main class="about-me-main">
+            <div class="about-me-blurb">
+                <div class="about-me-blurb-container">
+                    <h1>About Me:</h1>
+                    <h4>I recently graduated from the University of Waterloo, with a master's in Electrical and Computer Engineering (April 2020) and bachelor's in Nanotechnology Engineering (2018). My day to day work during master's mainly consisted of writing Matlab code to simulate the quantum physics in semiconductor nanostructures. I am now self-learning front-end web development technologies (HTML, CSS, Javascript & React) while job hunting. Feel free to message me!</h4>
+                </div>
+            </div>
+    
+            <div class="about_photo_container">
+                <img src="images/cat.jpg" class="about_photo">
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <ul class="social-list">
+    
+                <li class="social-list__item">
+                <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
+                    <i class="fas fa-envelope"></i>
                 </a>
-            </li>
-
-        </ul>
-        <p class="footer-text">&#169 CATHY WANG 2020 </p> 
-    </footer>
-
+                </li>
+    
+                <li class="social-list__item">
+                    <a href="https://www.linkedin.com/in/kaixi-wang-a192b18a/" class="social-list__link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+        
+                <li class="social-list__item">
+                    <a href="https://github.com/kx-wang" class="social-list__link">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+    
+            </ul>
+            <p class="footer-text">&#169 CATHY WANG 2020 </p> 
+        </footer>
+        <script src="index.js"></script>
+    
+    </body>
+    
 
 </html>
