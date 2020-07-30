@@ -12,18 +12,22 @@
     </head>
 
     <body>
-        <header class="topnav"> 
+        <header class="topnav">
             <div class="topnav-left">
-                <a href="index.html">CATHY WANG</a>
+                <a class="topnav-logo" href="index.html">CATHY WANG</a>
+                <button aria-label="Open navigation" class="open-nav">&#9776;</button>
             </div>
-
-            <div class="topnav-right">
-                <a class="navlink" href="index.html">Home</a>
-                <a class="navlink active" href="work.html">Work</a>
-                <a class="navlink" href="resume-general.pdf">Résumé</a>
-                <a class="navlink" href="about.html">About</a>
-            </div>
-        </header> <!--for the top navigation bar -->
+            
+            <nav class="nav">
+                <button aria-label="Close navigation" class="close-nav">&times;</button>
+                <ul class="topnav-right">
+                    <li class="nav-list-item"><a class="navlink" href="index.html">Home</a></li>
+                    <li class="nav-list-item"><a class="navlink current" href="work.html">Work</a></li>
+                    <li class="nav-list-item"><a class="navlink" href="resume-general.pdf">Résumé</a></li>
+                    <li class="nav-list-item"><a class="navlink" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header><!--for the top navigation bar -->
 
         <main class="work-page">
             <h1 class="section__title">My Work</h1>
@@ -85,33 +89,37 @@
             
             </div>
         </main>
+
+        <footer class="footer">
+            <ul class="social-list">
+    
+                <li class="social-list__item">
+                <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
+                    <i class="fas fa-envelope"></i>
+                </a>
+                </li>
+    
+                <li class="social-list__item">
+                <a href="https://www.linkedin.com/in/kaixi-wang-a192b18a/" class="social-list__link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                </li>
+    
+                <li class="social-list__item">
+                <a href="https://github.com/kx-wang" class="social-list__link">
+                    <i class="fab fa-github-square"></i>
+                </a>
+                </li>
+    
+            </ul>
+    
+            <p class="footer-text">&#169 CATHY WANG 2020 </p> 
+        </footer>
+        <script src="index.js"></script>
     </body>
 
 
-    <footer class="footer">
-        <ul class="social-list">
-
-            <li class="social-list__item">
-            <a href="mailto:kaixiwang95@gmail.com" class="social-list__link"> 
-                <i class="fas fa-envelope"></i>
-            </a>
-            </li>
-
-            <li class="social-list__item">
-            <a href="https://www.linkedin.com/in/kaixi-wang-a192b18a/" class="social-list__link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            </li>
-
-            <li class="social-list__item">
-            <a href="https://github.com/kx-wang" class="social-list__link">
-                <i class="fab fa-github-square"></i>
-            </a>
-            </li>
-
-        </ul>
-        <p class="footer-text">&#169 CATHY WANG 2020 </p> 
-    </footer>
+    
 
 
 </html>
