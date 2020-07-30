@@ -7,16 +7,30 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.5em;
     font-family: 'Red Rose', cursive;
 }
-html, body{
+html{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
     font-size: 20px; /* default font size, and then the h1 h2 etc will grow with it*/
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: 1fr auto;
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* this is to layout the nav bar, main content, and footer*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* makes it so that the body takes up all the viewport*/
+}
+
+@media (max-width: 600px) {
+    html, body {
+        font-size: 14px
+    }
+}
+
 img {
     overflow: hidden;
 }
@@ -26,91 +40,188 @@ img {
 /* ---------------------------------------------------------------------------*/
 /* Adding properties to the navigation bar */
 .topnav {
+    background-color:#fcd5ce;
     display: flex;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #fcd5ce;
+    justify-content: space-between;
     font-family: 'Red Rose', cursive;
-    position: fixed;
-    top: 0px;
-    padding: 20px;
-    height: auto;
-    margin-bottom: 2em;
-    z-index: 1;
 }
-.topnav > .topnav-left {
-    width: 20%;
+.navlink {
+    text-decoration: none;
+    color: #680e0e;
+    padding: 0.7rem;
 }
 
-.topnav > .topnav-left a {
+.nav-list-item {
+    list-style-type:none;
     color: #680e0e;
-    padding: 14px 16px; /*vertical horizontal*/
-    text-decoration: none;
+    padding: 0 1rem;
 }
 
-/* Style the links inside the navigation bar */
-.topnav >.topnav-right {
-    width: 80%;
-    text-align: right;
-}
-.topnav >.topnav-right > .navlink {
-    color: #680e0e;
-    padding: 14px 16px;
+.topnav-logo {
     text-decoration: none;
+    color: #680e0e;
+    margin: 1rem;
+    position: absolute;
 }
-  
-/* Change the color of links on hover */
-.topnav >.topnav-right .navlink:hover {
+.topnav-right {
+    display: flex;
+}
+
+.open-nav, .close-nav {
+    display: none;
+    cursor: pointer;
+    color: #680e0e;
+}
+
+.navlink:hover, .navlink:focus {
     background-color: #fff1e6;
     color: #680e0e;
     border-radius: 10%;
 }
   
 /* Add a color to the active/current link */
-.topnav >.topnav-right > .active{
+.current{
     color: #680e0e;
     border-radius: 10%;
     background-color: #fff1e6;
 }
+
+/* if smaller than 700px */
+@media (max-width: 700px) {
+    .open-nav, .close-nav {
+        display: block;
+        margin: 1rem;
+        background-color: #fcd5ce;
+        border: 0;
+    }
+
+    .close-nav {
+        position: absolute;
+        top:0; 
+        left: 0; 
+        font-size: 1.5rem;
+    }
+
+    .topnav-left{
+        width: 100%;
+
+        display: flex; 
+        justify-content: space-between;
+
+        background-color: #fcd5ce;
+        color: #680e0e;
+    }
+    .topnav-logo {
+        position: relative;
+    }
+    
+    .nav {
+        width: 100vw;
+        height: 100vh;
+
+        position: fixed; /* makes it so that it's like a stand-alone object*/
+        background-color: #fcd5ce;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        left: 100%; /* starts off screen when page initially loads*/
+    }
+
+    .topnav-right {
+        height: 70%;
+        width: 60%;
+        padding: 0;
+
+        font-size: 1.5rem;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; /*vertically space content */
+
+        border: 1px solid #680e0e;
+        border-radius: 5%;
+    }
+    
+}
+
 
 /* ---------------------------------------------------------------------------*/
 /* Landing page blurb and image                                               */
 /* ---------------------------------------------------------------------------*/
 .home-page{
     width: 100%;
+    flex: 1; /*expands vertically to fill height */
+
     display: flex;
     box-sizing: border-box;
-    margin-top: 10px; 
-    position: absolute;
-    top: 80px; /* makes it so the divs aren't overlapping*/
 }
-.home-page > .landing-blurb{
-    width: 45%;
-    text-align: right;
-    position: relative;
-    top: 100px;
-}
-.home-page > img.landing-img {
-    width: 400px;
-    height: 400px;
-    left: 50px;
-    position: relative;
 
+.home-page > .landing-blurb{
+    width: 50%;
+    
+    display: flex; 
+    flex-direction: column;
+    align-items: right; 
+    justify-content: center; /* centers vertically the text*/
+}
+
+.landing-blurb-container{
+    text-align: right;
+}
+.img-container {
+    width: 50%;
+
+    /*centers vertically the img */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+}
+.landing-img {
+    width: 70%; /* of the parent (img-container)*/
+    height: auto; 
+    z-index: -1;
     animation: float 10s ease-in-out infinite;
 }
 
 @keyframes float {
     0% {
-		transform: translatey(0px);
+		transform: translatey(-5%);
 	}
 	50% {
-		transform: translatey(+30px);
+		transform: translatey(+5%);
 	}
 	100% {
-		transform: translatey(0px);
-	}
+		transform: translatey(-5%);
+    }
 }
 
+@media (max-width: 700px){
+    .home-page{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-page > .landing-blurb{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .landing-blurb-container{
+        text-align: center;
+        width: 80%;
+    }
+    .img-container {
+        width: 100%;
+        align-items: center;
+    }
+    .landing-img {
+        width: 70%; /* of the parent (img-container)*/
+        height: auto; 
+    }
+}
 
 /* ---------------------------------------------------------------------------*/
 /* my works page                                                              */
@@ -129,7 +240,7 @@ img {
 /* display grid onto the porfolio__item */
 .portfolio{
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));  
+    grid-template-columns: repeat(3, minmax(100px, 1fr));  
     justify-items: center;
     align-items: center;
 }
@@ -144,7 +255,7 @@ img {
 .portfolio > .portfolio__item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
-    margin: 20px;
+    margin: 1rem;
 }
 
 .portfolio__img{  
@@ -162,35 +273,70 @@ img {
 
 .description {
     text-align: center; 
-    padding: 20px;
+    padding: 1rem;
 }
+
+@media (max-width: 700px){
+    .portfolio{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));  
+        justify-items: center;
+        align-items: center;
+    }
+}
+
 
 /* ---------------------------------------------------------------------------*/
 /* about me page                                                              */
 /* ---------------------------------------------------------------------------*/
 .about-me-main{
     width: 100%;
+    flex: 1; /*expands vertically to fill height */
+
     display: flex;
     box-sizing: border-box;
-    margin-top: 10px; 
-    position: absolute;
-    top: 80px;
 }
 
 .about-me-blurb{
-    width: 50%;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-left: 270px;
-    position: relative;
-}
-.about_photo{
-    width: 50%;
-    margin-left: 100px;
-    margin-top: 60px;
-    position: relative;
+    width: 60%;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;  
+    justify-content: center;
 }
 
+.about-me-blurb-container {
+    width: 75%;
+    text-align: left;
+}
+
+.about_photo_container{
+    width: 40%;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: center;
+}
+.about_photo{
+    width: 40%;
+    margin-left: 10%;
+}
+
+@media (max-width: 700px){
+    .about-me-main {
+        flex-direction: column;
+    }
+    .about-me-blurb, .about_photo_container{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    } 
+    .about_photo {
+        margin-left: 0;
+        margin-bottom: 10%;
+    }
+}
 
 /* ---------------------------------------------------------------------------*/
 /* footer                                                                     */
@@ -199,10 +345,6 @@ img {
     background-color: #6D6875;
     text-align: center;
     padding: 1.5em 0; /* space within box, between the content */
-    bottom: 0;
-    position: static;
-    grid-row-start: 2;
-    grid-row-end: 3;
 }
 .footer a { 
     color: #E5989B;
@@ -221,7 +363,6 @@ img {
     color: #E5989B;
     font-size: 14px;
 }
-
 .social-list__item {
     margin: 0 2em; /*without this the icons would be squished */
 }
@@ -230,9 +371,3 @@ img {
     opacity: .7;
 }
 
-/*
-border: 1px solid green;
-    border-color: rgb(39, 39, 2);
-    border-width: 3px;
-    border-style: solid;
-*/
